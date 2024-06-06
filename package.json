@@ -1,0 +1,26 @@
+{
+  "name": "template-backend",
+  "version": "1.0.0",
+  "description": "This is template for backend for typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coder7475/template-backend.git"
+  },
+  "keywords": [
+    "typscript",
+    "nodejs",
+    "express",
+    "mongoose",
+    "zod"
+  ],
+  "author": "robiul hossain",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coder7475/template-backend/issues"
+  },
+  "homepage": "https://github.com/coder7475/template-backend#readme"
+}
