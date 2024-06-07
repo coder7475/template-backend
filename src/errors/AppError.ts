@@ -2,7 +2,7 @@
 class AppError extends Error {
   constructor(
     public status = 500,
-    message: string,
+    message = '',
     stack = '',
   ) {
     // parent constructor
