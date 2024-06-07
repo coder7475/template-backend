@@ -1,13 +1,14 @@
 // * Version one router
 // parent route: /api/v1
 import { Router } from 'express';
+import { UserRoutes } from '../modules/user/user.route';
 
 const router = Router();
 
 const moduleRoutes = [
   {
-    path: '/',
-    route: '/',
+    path: '/users',
+    route: UserRoutes,
   },
 ];
 
