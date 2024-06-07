@@ -19,9 +19,10 @@ async function main() {
     console.log(err);
   }
 }
-
-main();
-
+// ------------MAIN-----------------
+main(); // * run the main function
+//-----------------------------------
+//? handle special errors
 process.on('unhandledRejection', () => {
   console.log(`😈 unahandledRejection is detected , shutting down ...`);
   if (server) {
