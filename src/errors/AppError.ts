@@ -2,8 +2,8 @@
 class AppError extends Error {
   constructor(
     public status = 500,
-    message = '',
-    stack = '',
+    public message = '',
+    public stack = '',
   ) {
     // parent constructor
     super(message);
