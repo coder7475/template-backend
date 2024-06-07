@@ -1,11 +1,13 @@
 import { Request, Response } from 'express';
+import sendResponse from '../utils/sendResponse';
 import httpStatus from 'http-status';
 
 const notFound = (req: Request, res: Response) => {
-  return res.status(httpStatus.NOT_FOUND).json({
+  return sendResponse(res, {
+    statusCode: httpStatus.NOT_FOUND,
     success: false,
-    message: 'This api does not exits!!',
-    error: '',
+    message: 'NOT FOUND',
+    data: null,
   });
 };
 
