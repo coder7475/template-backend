@@ -1,6 +1,6 @@
+import app from './app';
 import { Server } from 'http';
 import mongoose from 'mongoose';
-import app from './app';
 import parameters from './parameters';
 
 // declare server variable
