@@ -1,13 +1,20 @@
 import cors from 'cors';
 import express, { Application } from 'express';
+import notFound from './middlewares/notFound';
 const app: Application = express();
 
-//parsers
+// *? middlewares
 app.use(express.json());
 app.use(cors());
 
-app.get('/', () => {
-  console.log(`This is working`);
+app.get('/', (req, res) => {
+  res.send({
+    success: true,
+    message: 'Template is working',
+    error: '',
+  });
 });
+//Not Found
+app.use(notFound);
 
 export default app;
