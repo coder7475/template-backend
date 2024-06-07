@@ -7,14 +7,7 @@ const app: Application = express();
 app.use(express.json());
 app.use(cors());
 
-app.get('/', (req, res) => {
-  res.send({
-    success: true,
-    message: 'Template is working',
-    error: '',
-  });
-});
-//Not Found
+//? For all others routes - Routes Not Found
 app.use(notFound);
 
 export default app;
