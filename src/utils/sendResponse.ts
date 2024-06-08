@@ -1,7 +1,7 @@
 import { Response } from 'express';
-import { TResponse } from '../interfaces/response';
+import IResponse from '../interfaces/response';
 
-const sendResponse = <T>(res: Response, data: TResponse<T>) => {
+const sendResponse = <T>(res: Response, data: IResponse<T>) => {
   res.status(data?.statusCode).json({
     success: data?.success,
     message: data?.message,
