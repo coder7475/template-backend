@@ -42,7 +42,9 @@ const globalErrorHandler: ErrorRequestHandler = (err, req, res, next) => {
       errorObj.message,
       errorObj.errorSources,
     ];
-  }
+  } else if (err?.code === 11000) {
+    
+  } 
 
   // return the result
   return res.status(statusCode).json({

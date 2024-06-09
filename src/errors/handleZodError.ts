@@ -1,6 +1,6 @@
+import httpStatus from 'http-status';
 import { ZodError, ZodIssue } from 'zod';
 import { IGenericErrorResponse, TErrorSources } from '../interfaces/error';
-import httpStatus from 'http-status';
 
 const handleZodError = (err: ZodError): IGenericErrorResponse => {
   const errorSources: TErrorSources = err.issues.map((issue: ZodIssue) => {

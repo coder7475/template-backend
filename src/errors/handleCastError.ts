@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
-import { TErrorSources, IGenericErrorResponse } from './../interfaces/error';
 import httpStatus from 'http-status';
+import { TErrorSources, IGenericErrorResponse } from './../interfaces/error';
 
 const handleCastError = (
   err: mongoose.Error.CastError,
@@ -14,7 +14,7 @@ const handleCastError = (
 
   return {
     statusCode: httpStatus.BAD_REQUEST,
-    message: 'Cast Error: Invalid ID',
+    message: 'Cast Error',
     errorSources,
   };
 };
