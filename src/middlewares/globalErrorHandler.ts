@@ -5,6 +5,7 @@ import { ZodError } from 'zod';
 import handleZodError from '../errors/handleZodError';
 import handleValidationError from '../errors/handleValidationError';
 import handleCastError from '../errors/handleCastError';
+import handleDuplicateError from '../errors/handleDuplicateError';
 
 const globalErrorHandler: ErrorRequestHandler = (err, req, res, next) => {
   // ser default error message values
@@ -43,7 +44,13 @@ const globalErrorHandler: ErrorRequestHandler = (err, req, res, next) => {
       errorObj.errorSources,
     ];
   } else if (err?.code === 11000) {
-    
+    const errorObj = handleDuplicateError(err);
+    // assign mongoose cast error
+    [statusCode, message, errorSources] = [
+      errorObj.statusCode,
+      errorObj.message,
+      errorObj.errorSources,
+    ];
   } 
 
   // return the result
