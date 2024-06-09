@@ -4,6 +4,7 @@ import parameters from '../parameters';
 import { ZodError } from 'zod';
 import handleZodError from '../errors/handleZodError';
 import handleValidationError from '../errors/handleValidationError';
+import handleCastError from '../errors/handleCastError';
 
 const globalErrorHandler: ErrorRequestHandler = (err, req, res, next) => {
   // ser default error message values
@@ -34,7 +35,7 @@ const globalErrorHandler: ErrorRequestHandler = (err, req, res, next) => {
       errorObj.errorSources,
     ];
   } else if (err?.name === 'CastError') { 
-    const errorObj = handleValidationError(err);
+    const errorObj = handleCastError(err);
     // assign mongoose cast error
     [statusCode, message, errorSources] = [
       errorObj.statusCode,
