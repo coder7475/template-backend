@@ -16,7 +16,7 @@ const handleValidationError = (
 
   return {
     statusCode: httpStatus.BAD_REQUEST,
-    message: 'Validation Error',
+    message: 'Mongoose Validation Error',
     errorSources,
   };
 };

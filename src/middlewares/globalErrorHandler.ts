@@ -27,7 +27,15 @@ const globalErrorHandler: ErrorRequestHandler = (err, req, res, next) => {
     ];
   } else if (err?.name === 'ValidationError') {
     const errorObj = handleValidationError(err);
-    // assign zod error
+    // assign mongoose validation error
+    [statusCode, message, errorSources] = [
+      errorObj.statusCode,
+      errorObj.message,
+      errorObj.errorSources,
+    ];
+  } else if (err?.name === 'CastError') { 
+    const errorObj = handleValidationError(err);
+    // assign mongoose cast error
     [statusCode, message, errorSources] = [
       errorObj.statusCode,
       errorObj.message,
