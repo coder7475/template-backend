@@ -2,17 +2,27 @@
 
 [Short description of your project]
 
-**Live URL:** [Link to your deployed project] (If applicable)
+**Live URL:** [Link to your deployed project] 
 
 ### Features:
 
-* List of key features your project offers
+- **User Authentication**: Secure login and registration using JWT.
+- ...other features
 
 ### Technology Stack:
 
-* Programming languages used (e.g., Python, Java)
-* Frameworks or libraries used (e.g., Django, React)
-* Other relevant technologies (e.g., databases, cloud platforms)
+* Express.js
+* TypeScript
+* Mongoose
+* Zod
+* .....other technologies
+
+### Prerequisites
+
+- Node.js
+- npm
+- MongoDB
+- ....other prerequisites
 
 ### Installation:
 
@@ -49,8 +59,6 @@
    npm run dev
    ```
 ### Usage:
-
-(How to use your project)
 
 1. Visit http://localhost:<port_name> to see the application in action.
 2. Step 2
