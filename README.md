@@ -22,6 +22,7 @@
 - Node.js
 - npm
 - MongoDB
+- [Prettier ESLint](vs-code-prettier-eslint)
 - ....other prerequisites
 
 ### Installation:
